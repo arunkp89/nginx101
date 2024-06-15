@@ -31,7 +31,7 @@ spec:
             readOnlyRootFilesystem: true
           image: arukumacr2.azurecr.io/nginx:latest
           ports:
-          - containerPort: 80
+          - containerPort: 8080
           resources:
             requests:
               cpu: 100m
@@ -53,7 +53,7 @@ spec:
   ports:
   - name: http
     port: 80
-    targetPort: 80
+    targetPort: 8080
 ---
 apiVersion: v1
 kind: Service
@@ -68,4 +68,4 @@ spec:
   ports:
   - name: http
     port: 80
-    targetPort: 80
+    targetPort: 8080
