@@ -5,7 +5,12 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
-
+env:
+  AZURE_CONTAINER_REGISTRY: "arukumacr2"
+  CONTAINER_NAME: "nginx"
+  RESOURCE_GROUP: "aks-eastus"
+  CLUSTER_NAME: "aks1"
+  DEPLOYMENT_MANIFEST_PATH: "frontend.yaml"
 
 jobs:
   buildImage:
