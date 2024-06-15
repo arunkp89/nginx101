@@ -29,7 +29,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: arukumacr2.azurecr.io/nginx-custom:latest
+          image: arukumacr2.azurecr.io/nginx:latest
           ports:
           - containerPort: 80
           readinessProbe:
@@ -44,7 +44,7 @@ spec:
               port: 80
           env:
           - name: PORT
-            value: "8080"
+            value: "80"
           resources:
             requests:
               cpu: 100m
