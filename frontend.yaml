@@ -32,19 +32,6 @@ spec:
           image: arukumacr2.azurecr.io/nginx:latest
           ports:
           - containerPort: 80
-          readinessProbe:
-            initialDelaySeconds: 10
-            httpGet:
-              path: "/"
-              port: 80
-          livenessProbe:
-            initialDelaySeconds: 10
-            httpGet:
-              path: "/"
-              port: 80
-          env:
-          - name: PORT
-            value: "80"
           resources:
             requests:
               cpu: 100m
