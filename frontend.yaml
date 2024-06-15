@@ -15,20 +15,8 @@ spec:
         app: frontend
     spec:
       serviceAccountName: workload-identity-sa
-      securityContext:
-        fsGroup: 1000
-        runAsGroup: 1000
-        runAsNonRoot: true
-        runAsUser: 1000
       containers:
         - name: server
-          securityContext:
-            allowPrivilegeEscalation: false
-            capabilities:
-              drop:
-                - ALL
-            privileged: false
-            readOnlyRootFilesystem: true
           image: arukumacr2.azurecr.io/nginx:latest
           ports:
           - containerPort: 8080
